@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  </head>
+  <body>
+    <div ng-app="myApp">
+      <div ng-controller="myCtrl">
+        FirstName <input type="text" ng-model="firstName" />; {{firstName}}
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const app = angular.module("myApp", "routes");
+
+    app.controller("myCtrl", function ($scope) {
+      $scope.firstName = "John";
+      $scope.lastName = "Godbless";
+    });
+
+    app.config("Routes", function ($rooteProvider) {
+      $rooteProvider.when("/dfasdfsddfsd", {});
+    });
+  </script>
+</html>
