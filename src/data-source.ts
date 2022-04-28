@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 import { User } from "./entity/User";
-import { environment } from "../environment";
+import { environment } from "./environment";
 export const AppDataSource = new DataSource({
   type: "mssql",
   host: "localhost",
